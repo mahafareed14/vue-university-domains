@@ -33,6 +33,7 @@
     ></DomainDetails>
   </v-container>
 </template>
+
 <script>
 import axios from "axios";
 import DomainDetails from "./DomainDetails.vue";
@@ -110,8 +111,6 @@ export default {
         let arr = alldata[0].university.filter(
           (obj) => obj.name == this.selectedUniverity
         );
-        console.log(arr[0].domains);
-        console.log(arr[0].web_pages);
         this.domains = arr[0].domains;
         this.web_pages = arr[0].web_pages;
       }
